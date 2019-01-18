@@ -14,7 +14,7 @@ public class StudentReader {
                 .skip(1)
                 .map(line -> line.split(";"))
                 .map(columns -> new Student(columns[0],columns[1],
-                        Integer.valueOf(2),Integer.valueOf(3),Integer.valueOf(4)))
+                        Integer.valueOf(columns[2]),Integer.valueOf(columns[3]),Integer.valueOf(columns[4])))
                 .collect(Collectors.toList());
     }
 }
